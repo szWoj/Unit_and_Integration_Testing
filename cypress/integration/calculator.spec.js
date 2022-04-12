@@ -14,7 +14,7 @@ describe("Calculator", () => {
     cy.get('.display').should('contain', '24')
 
   });
-
+//3+3
   it('should an arithmetical operation (+) update the display with the result of the operation', () => {
     cy.get('#number3').click();
     cy.get('#operator_add').click();
@@ -24,7 +24,7 @@ describe("Calculator", () => {
     cy.get('.display').should('contain', '6')
 
   });
-
+//3-3
   it('should an arithmetical operation (-) update the display with the result of the operation', () => {
     cy.get('#number3').click();
     cy.get('#operator-subtract').click();
@@ -34,7 +34,7 @@ describe("Calculator", () => {
     cy.get('.display').should('contain', '0')
 
   });
-
+//3*3
   it('should an arithmetical operation (multiply) update the display with the result of the operation', () => {
     cy.get('#number3').click();
     cy.get('#operator-multiply').click();
@@ -44,7 +44,7 @@ describe("Calculator", () => {
     cy.get('.display').should('contain', '9')
 
   });
-
+// 3/3
   it('should an arithmetical operation (divide) update the display with the result of the operation', () => {
     cy.get('#number3').click();
     cy.get('#operator-divide').click();
@@ -76,7 +76,7 @@ describe("Calculator", () => {
     cy.get('.display').should('contain', '3')
 
   });
-
+//1-3
 it('Is the output as expected for a negative number', () => {
   cy.get('#number1').click();
   cy.get('#operator-subtract').click();
@@ -85,8 +85,8 @@ it('Is the output as expected for a negative number', () => {
   cy.get('.display').should('contain', '-2')
 
   });
-
-it('Is the output as expected for a negative number', () => {
+// 1/2
+it('Is the output as expected for a decimal number', () => {
   cy.get('#number1').click();
   cy.get('#operator-divide').click();
   cy.get('#number2').click();
@@ -94,7 +94,7 @@ it('Is the output as expected for a negative number', () => {
   cy.get('.display').should('contain', '0.5')
   
     });
-
+//1111 * 1
 it('Is the output as expected for a large number', () => {
   cy.get('#number1').click();
   cy.get('#number1').click();
@@ -109,7 +109,7 @@ it('Is the output as expected for a large number', () => {
   cy.get('.display').should('contain', '1111')
       
         });
-
+//1/0
   it('devide by zero', () => {
     cy.get('#number1').click();
     cy.get('#operator-divide').click();
